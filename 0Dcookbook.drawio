@@ -1,0 +1,110 @@
+<mxfile host="Electron" modified="2024-03-11T03:25:57.306Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.0.4 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="BoHx67blYdauJeZucKnN" version="24.0.4" type="device" pages="3">
+  <diagram name="Demux4" id="J2BKXPokf6-RhqMmi_0K">
+    <mxGraphModel dx="1114" dy="724" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="-iI43zFKoiiJ3_BvQH93-1" value="Demux 4" style="rounded=1;whiteSpace=wrap;html=1;sketch=0;container=1;recursiveResize=0;verticalAlign=top;arcSize=6;fontStyle=1;autosize=0;points=[];absoluteArcSize=1;shadow=1;strokeColor=#001DBC;fillColor=#DAE8FC;fontColor=#ffffff;fontFamily=Helvetica;fontSize=11;gradientColor=#0050EF;" vertex="1" parent="1">
+          <mxGeometry x="110" y="190" width="90" height="191.25" as="geometry">
+            <mxRectangle x="-98" y="-1230" width="99" height="26" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-iI43zFKoiiJ3_BvQH93-2" value="1" style="rounded=1;whiteSpace=wrap;html=1;sketch=0;points=[[0,0.5,0,0,0],[1,0.5,0,0,0]];fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;arcSize=50;fontFamily=Helvetica;fontSize=11;" vertex="1" parent="-iI43zFKoiiJ3_BvQH93-1">
+          <mxGeometry x="70" y="17.5" width="30" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="-iI43zFKoiiJ3_BvQH93-3" value="2" style="rounded=1;whiteSpace=wrap;html=1;sketch=0;points=[[0,0.5,0,0,0],[1,0.5,0,0,0]];fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;arcSize=50;fontFamily=Helvetica;fontSize=11;" vertex="1" parent="-iI43zFKoiiJ3_BvQH93-1">
+          <mxGeometry x="70" y="51.25" width="30" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="-iI43zFKoiiJ3_BvQH93-4" value="✗" style="rounded=1;whiteSpace=wrap;html=1;sketch=0;points=[[0,0.5,0,0,0],[1,0.5,0,0,0]];fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;arcSize=50;opacity=30;textOpacity=30;fontFamily=Helvetica;fontSize=11;" vertex="1" parent="-iI43zFKoiiJ3_BvQH93-1">
+          <mxGeometry x="60" y="151.25" width="40" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="-iI43zFKoiiJ3_BvQH93-5" value="4" style="rounded=1;whiteSpace=wrap;html=1;sketch=0;points=[[0,0.5,0,0,0],[1,0.5,0,0,0]];fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;arcSize=50;fontFamily=Helvetica;fontSize=11;" vertex="1" parent="-iI43zFKoiiJ3_BvQH93-1">
+          <mxGeometry x="70" y="115" width="30" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="-iI43zFKoiiJ3_BvQH93-6" value="3" style="rounded=1;whiteSpace=wrap;html=1;sketch=0;points=[[0,0.5,0,0,0],[1,0.5,0,0,0]];fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;arcSize=50;fontFamily=Helvetica;fontSize=11;" vertex="1" parent="-iI43zFKoiiJ3_BvQH93-1">
+          <mxGeometry x="70" y="83.13" width="30" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="-iI43zFKoiiJ3_BvQH93-7" value="" style="rounded=1;whiteSpace=wrap;html=1;sketch=0;points=[[0,0.5,0,0,0],[1,0.5,0,0,0]];arcSize=50;fontFamily=Helvetica;fontSize=11;fontColor=default;" vertex="1" parent="-iI43zFKoiiJ3_BvQH93-1">
+          <mxGeometry x="-10" y="71.25" width="40" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="-iI43zFKoiiJ3_BvQH93-8" value="&lt;div&gt;demux4 :: proc (name: string, owner : ^zd.Eh) -&amp;gt; ^zd.Eh {&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; handle :: proc (eh: ^zd.Eh, msg: ^zd.Message) {&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: normal;&quot;&gt;&lt;span style=&quot;white-space:pre&quot;&gt;&#x9;&lt;/span&gt;// incoming datum is a string, containing a digit 1-4, pulse the corresponding output&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: normal;&quot;&gt;&lt;span style=&quot;white-space:pre&quot;&gt;&#x9;&lt;/span&gt;pulse := zd.new_datum_bang ()&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: normal;&quot;&gt;&lt;span style=&quot;white-space:pre&quot;&gt;&#x9;&lt;/span&gt;switch msg.datum.repr (msg.datum) {&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: normal;&quot;&gt;&lt;span style=&quot;white-space:pre&quot;&gt;&#x9;&lt;/span&gt;case &quot;1&quot;:&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: normal;&quot;&gt;&lt;span style=&quot;white-space:pre&quot;&gt;&#x9;&lt;/span&gt;&amp;nbsp; &amp;nbsp; zd.send (eh, &quot;1&quot;, pulse, msg)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: normal;&quot;&gt;&lt;span style=&quot;white-space:pre&quot;&gt;&#x9;&lt;/span&gt;case &quot;2&quot;:&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: normal;&quot;&gt;&lt;span style=&quot;white-space:pre&quot;&gt;&#x9;&lt;/span&gt;&amp;nbsp; &amp;nbsp; zd.send (eh, &quot;2&quot;, pulse, msg)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: normal;&quot;&gt;&lt;span style=&quot;white-space:pre&quot;&gt;&#x9;&lt;/span&gt;case &quot;3&quot;:&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: normal;&quot;&gt;&lt;span style=&quot;white-space:pre&quot;&gt;&#x9;&lt;/span&gt;&amp;nbsp; &amp;nbsp; zd.send (eh, &quot;3&quot;, pulse, msg)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: normal;&quot;&gt;&lt;span style=&quot;white-space:pre&quot;&gt;&#x9;&lt;/span&gt;case &quot;4&quot;:&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: normal;&quot;&gt;&lt;span style=&quot;white-space:pre&quot;&gt;&#x9;&lt;/span&gt;&amp;nbsp; &amp;nbsp; zd.send (eh, &quot;4&quot;, pulse, msg)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; case:&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: normal;&quot;&gt;&lt;span style=&quot;white-space:pre&quot;&gt;&#x9;&lt;/span&gt;&amp;nbsp; &amp;nbsp; fmt.assertf (false, &quot;fatal internal error in demux4&quot;)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: normal;&quot;&gt;&lt;span style=&quot;white-space:pre&quot;&gt;&#x9;&lt;/span&gt;}&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; }&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; name_with_id := std.gensym(&quot;demux4&quot;)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; return zd.make_leaf (name_with_id, owner, nil, handle)&lt;/div&gt;&lt;div&gt;}&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;strokeWidth=2;shadow=0;textShadow=0;glass=0;fillColor=#f5f5f5;strokeColor=#CCCCCC;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="50" y="450" width="480" height="330" as="geometry" />
+        </mxCell>
+        <mxCell id="-iI43zFKoiiJ3_BvQH93-9" value="Converts input string (containing a single digit &quot;1&quot;..&quot;4&quot;) into a pulse (Bang) on 1 of 4 outputs. All other outputs remain silent.&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Like a &quot;demultiplexer&quot; chip in electronics.&lt;/div&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;fontColor=#000000;darkOpacity=0.05;fillColor=#FFF9B2;strokeColor=none;fillStyle=solid;direction=west;gradientDirection=north;gradientColor=#FFF2A1;shadow=1;size=20;pointerEvents=1;align=left;spacingLeft=5;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="230" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="3NcS_Dp7Pgnw7-lP9wFN-1" value="&lt;div&gt;&amp;nbsp; &amp;nbsp; zd.append_leaf (leaves, zd.Leaf_Template { name = &quot;Demux 4&quot;, instantiate = demux4 })&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;strokeWidth=2;shadow=0;textShadow=0;glass=0;fillColor=#f5f5f5;strokeColor=#CCCCCC;fontColor=#333333;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="40" y="400" width="510" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="Random" id="ErrllwIV-6fBQqUu7tFH">
+    <mxGraphModel dx="1114" dy="724" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="SE2qEXros7cmySbLojSw-0" />
+        <mxCell id="SE2qEXros7cmySbLojSw-1" parent="SE2qEXros7cmySbLojSw-0" />
+        <mxCell id="SE2qEXros7cmySbLojSw-9" value="&lt;div&gt;&lt;div&gt;random0d :: proc (name : string, owner : ^zd.Eh) -&amp;gt; ^zd.Eh {&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; handle :: proc (eh: ^zd.Eh, msg: ^zd.Message) {&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; // incoming datum is a string, containing a digit 1-4, pulse the corresponding output&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; pulse := zd.new_datum_bang ()&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; data: [2]int = { 1, 2 }&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; switch rand.choice (data[:]) {&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; case 1:&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; zd.send (eh, &quot;1&quot;, pulse, msg)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; case 2:&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; zd.send (eh, &quot;2&quot;, pulse, msg)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; case:&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; fmt.assertf (false, &quot;fatal internal error in random&quot;)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; }&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; }&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; name_with_id := std.gensym(&quot;Random&quot;)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; return zd.make_leaf (name_with_id, owner, nil, handle)&lt;/div&gt;&lt;div&gt;}&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;strokeWidth=2;shadow=0;textShadow=0;glass=0;fillColor=#f5f5f5;strokeColor=#CCCCCC;fontColor=#333333;" vertex="1" parent="SE2qEXros7cmySbLojSw-1">
+          <mxGeometry x="40" y="420" width="480" height="330" as="geometry" />
+        </mxCell>
+        <mxCell id="SE2qEXros7cmySbLojSw-10" value="When given a Bang (pulse) on its input &quot;&quot;, it produces a Bang on one of its 2 outputs, randomly." style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;fontColor=#000000;darkOpacity=0.05;fillColor=#FFF9B2;strokeColor=none;fillStyle=solid;direction=west;gradientDirection=north;gradientColor=#FFF2A1;shadow=1;size=20;pointerEvents=1;align=left;spacingLeft=5;" vertex="1" parent="SE2qEXros7cmySbLojSw-1">
+          <mxGeometry x="40" y="80" width="280" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="XxRgK1Dz8uF_D3Y8dT0c-0" value="Random" style="rounded=1;whiteSpace=wrap;html=1;sketch=0;container=1;recursiveResize=0;verticalAlign=top;arcSize=6;fontStyle=1;autosize=0;points=[];absoluteArcSize=1;shadow=1;strokeColor=#001DBC;fillColor=#FFFFFF;fontColor=#ffffff;fontFamily=Helvetica;fontSize=11;gradientColor=#0050EF;" vertex="1" parent="SE2qEXros7cmySbLojSw-1">
+          <mxGeometry x="80" y="200" width="130" height="110" as="geometry">
+            <mxRectangle x="-98" y="-1230" width="99" height="26" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XxRgK1Dz8uF_D3Y8dT0c-1" value="" style="rounded=1;whiteSpace=wrap;html=1;sketch=0;points=[[0,0.5,0,0,0],[1,0.5,0,0,0]];arcSize=50;fontFamily=Helvetica;fontSize=11;fontColor=default;" vertex="1" parent="XxRgK1Dz8uF_D3Y8dT0c-0">
+          <mxGeometry x="-10" y="42.5" width="39.25" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="XxRgK1Dz8uF_D3Y8dT0c-2" value="1" style="rounded=1;whiteSpace=wrap;html=1;sketch=0;points=[[0,0.5,0,0,0],[1,0.5,0,0,0]];fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;arcSize=50;fontFamily=Helvetica;fontSize=11;" vertex="1" parent="XxRgK1Dz8uF_D3Y8dT0c-0">
+          <mxGeometry x="110" y="27.5" width="35.25" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="XxRgK1Dz8uF_D3Y8dT0c-3" value="2" style="rounded=1;whiteSpace=wrap;sketch=0;points=[[0,0.5,0,0,0],[1,0.5,0,0,0]];fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;arcSize=50;fontFamily=Helvetica;fontSize=11;" vertex="1" parent="XxRgK1Dz8uF_D3Y8dT0c-0">
+          <mxGeometry x="110" y="67.5" width="35.25" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="XxRgK1Dz8uF_D3Y8dT0c-4" value="&lt;div&gt;&lt;div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; zd.append_leaf (leaves, zd.Leaf_Template { name = &quot;Random&quot;, instantiate = random0d })&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;strokeWidth=2;shadow=0;textShadow=0;glass=0;fillColor=#f5f5f5;strokeColor=#CCCCCC;fontColor=#333333;verticalAlign=middle;" vertex="1" parent="SE2qEXros7cmySbLojSw-1">
+          <mxGeometry x="30" y="360" width="510" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram name="š" id="oDsoRNG8B8Z1nwHO3_PS">
+    <mxGraphModel dx="1114" dy="724" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="lAfCcENBFvTBeN1LRZiv-0" />
+        <mxCell id="lAfCcENBFvTBeN1LRZiv-1" parent="lAfCcENBFvTBeN1LRZiv-0" />
+        <mxCell id="lAfCcENBFvTBeN1LRZiv-2" value="&lt;div&gt;&lt;div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Shell_buffer :: struct {&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; buffer : string&lt;/div&gt;&lt;div&gt;}&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;shell_out :: proc (name : string, owner : ^zd.Eh) -&amp;gt; ^zd.Eh {&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; handle :: proc (eh: ^zd.Eh, msg: ^zd.Message) {&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; fmt.println (msg)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; inst := &amp;amp;eh.instance_data.(Shell_buffer)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; switch msg.port {&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; case &quot;arg&quot;:&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; inst.buffer = fmt.aprintf (&quot;%v%v&quot;, inst.buffer, msg.datum.repr (msg.datum))&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; case &quot;run&quot;:&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; fmt.println (&quot;run&quot;, inst.buffer)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; stdout, stderr := zd.run_command (inst.buffer, &quot;&quot;)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; fmt.println (&quot;EXIT run&quot;)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; inst.buffer = &quot;&quot;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; if len (stderr) &amp;gt; 0 {&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; zd.send_string (eh, &quot;✗&quot;, stderr, msg)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; } else {&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; zd.send_string (eh, &quot;&quot;, stdout, msg)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; }&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; case:&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; fmt.assertf (false, &quot;FATAL internal error in shell_out %v&quot;, msg)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; }&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; }&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; name_with_id := std.gensym(&quot;shell_out&quot;)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; instp := new (Shell_buffer)&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; instp.buffer = &quot;&quot;&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; return zd.make_leaf (name_with_id, owner, instp^, handle)&lt;/div&gt;&lt;div&gt;}&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;strokeWidth=2;shadow=0;textShadow=0;glass=0;fillColor=#f5f5f5;strokeColor=#CCCCCC;fontColor=#333333;" vertex="1" parent="lAfCcENBFvTBeN1LRZiv-1">
+          <mxGeometry x="40" y="420" width="480" height="450" as="geometry" />
+        </mxCell>
+        <mxCell id="lAfCcENBFvTBeN1LRZiv-3" value="Shell-out. Collects all inputs on &lt;i&gt;arg&lt;/i&gt;&amp;nbsp;into a single string, then uses the collected string as a shell command when it receives a Bang on the &lt;i&gt;run&lt;/i&gt;&amp;nbsp;port." style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;fontColor=#000000;darkOpacity=0.05;fillColor=#FFF9B2;strokeColor=none;fillStyle=solid;direction=west;gradientDirection=north;gradientColor=#FFF2A1;shadow=1;size=20;pointerEvents=1;align=left;spacingLeft=5;" vertex="1" parent="lAfCcENBFvTBeN1LRZiv-1">
+          <mxGeometry x="40" y="10" width="280" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="lAfCcENBFvTBeN1LRZiv-4" value="&lt;span style=&quot;color: rgb(51, 51, 51); font-size: 12px; font-weight: 400; text-align: left;&quot;&gt;š&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;sketch=0;container=1;recursiveResize=0;verticalAlign=top;arcSize=6;fontStyle=1;autosize=0;points=[];absoluteArcSize=1;shadow=1;strokeColor=#001DBC;fillColor=#FFFFFF;fontColor=#ffffff;fontFamily=Helvetica;fontSize=11;gradientColor=#0050EF;" vertex="1" parent="lAfCcENBFvTBeN1LRZiv-1">
+          <mxGeometry x="80" y="200" width="130" height="110" as="geometry">
+            <mxRectangle x="-98" y="-1230" width="99" height="26" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lAfCcENBFvTBeN1LRZiv-5" value="arg" style="rounded=1;whiteSpace=wrap;html=1;sketch=0;points=[[0,0.5,0,0,0],[1,0.5,0,0,0]];arcSize=50;fontFamily=Helvetica;fontSize=11;fontColor=default;" vertex="1" parent="lAfCcENBFvTBeN1LRZiv-4">
+          <mxGeometry x="-10" y="30" width="39.25" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="Elw2leZp8oFsqAyl0whs-0" value="run" style="rounded=1;whiteSpace=wrap;html=1;sketch=0;points=[[0,0.5,0,0,0],[1,0.5,0,0,0]];arcSize=50;fontFamily=Helvetica;fontSize=11;fontColor=default;" vertex="1" parent="lAfCcENBFvTBeN1LRZiv-4">
+          <mxGeometry x="-10" y="70" width="39.25" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="SSYZjvqVBgFbYt7r5LPt-0" value="" style="rounded=1;whiteSpace=wrap;html=1;sketch=0;points=[[0,0.5,0,0,0],[1,0.5,0,0,0]];fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;arcSize=50;fontFamily=Helvetica;fontSize=11;" vertex="1" parent="lAfCcENBFvTBeN1LRZiv-4">
+          <mxGeometry x="110" y="30" width="35.25" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="lAfCcENBFvTBeN1LRZiv-8" value="&lt;div&gt;&amp;nbsp; &amp;nbsp; zd.append_leaf (leaves, zd.Leaf_Template { name = &quot;š&quot;, instantiate = shell_out })&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;strokeWidth=2;shadow=0;textShadow=0;glass=0;fillColor=#f5f5f5;strokeColor=#CCCCCC;fontColor=#333333;verticalAlign=middle;" vertex="1" parent="lAfCcENBFvTBeN1LRZiv-1">
+          <mxGeometry x="30" y="360" width="510" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Elw2leZp8oFsqAyl0whs-1" value="EXAMPLE:&amp;nbsp;&lt;div&gt;1. send &quot;node dialog.js &quot; to &lt;i&gt;arg&lt;/i&gt;&lt;/div&gt;&lt;div&gt;2. send&amp;nbsp;&quot;&#39;adventure;shop;rest;quit&#39;&quot; to &lt;i&gt;arg&lt;/i&gt;&lt;/div&gt;&lt;div&gt;3. send Bang (or anything) to &lt;i&gt;run&lt;/i&gt;&lt;/div&gt;&lt;div&gt;&lt;i&gt;&lt;br&gt;&lt;/i&gt;&lt;/div&gt;&lt;div&gt;calls shell with command: &quot;node dialog.js &#39;&lt;span style=&quot;background-color: initial;&quot;&gt;adventure;shop;rest;quit&#39;&quot; and waits, then sends stdout to port &quot;&quot;, or, sends stderr to port &quot;&lt;/span&gt;&lt;span style=&quot;color: rgb(51, 51, 51); background-color: initial;&quot;&gt;✗&quot; (if stderr is non-empty)&lt;/span&gt;&lt;br&gt;&lt;/div&gt;" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;fontColor=#000000;darkOpacity=0.05;fillColor=#FFF9B2;strokeColor=none;fillStyle=solid;direction=west;gradientDirection=north;gradientColor=#FFF2A1;shadow=1;size=20;pointerEvents=1;align=left;spacingLeft=5;" vertex="1" parent="lAfCcENBFvTBeN1LRZiv-1">
+          <mxGeometry x="330" y="30" width="380" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="SSYZjvqVBgFbYt7r5LPt-1" value="&lt;span style=&quot;color: rgb(51, 51, 51); font-size: 12px; text-align: left;&quot;&gt;✗&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;sketch=0;points=[[0,0.5,0,0,0],[1,0.5,0,0,0]];fillColor=#1ba1e2;fontColor=#ffffff;strokeColor=#006EAF;arcSize=50;fontFamily=Helvetica;fontSize=11;textOpacity=30;opacity=30;" vertex="1" parent="lAfCcENBFvTBeN1LRZiv-1">
+          <mxGeometry x="190" y="270" width="35.25" height="25" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
